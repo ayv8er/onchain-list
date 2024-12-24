@@ -77,48 +77,50 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="flex flex-col h-full">
-      <div className="flex-grow flex flex-col items-center py-20 space-y-8">
-        {
-          isLoading ? <Loader /> : (
-            <>
-              <div className="space-y-4 w-full">  
-                <ListContainer 
-                  items={items}
-                  listNames={decryptedListNames}
+    <div className="mx-auto w-full max-w-[430px] min-h-screen border">
+      <div className="flex flex-col h-full">
+        <div className="flex-grow flex flex-col items-center py-20 space-y-8">
+          {
+            isLoading ? <Loader /> : (
+              <>
+                <div className="space-y-4 w-full">  
+                  <ListContainer 
+                    items={items}
+                    listNames={decryptedListNames}
+                    selectedListName={selectedListName}
+                    handleSelectListName={handleSelectListName}
+                    setIsModalOpen={setIsModalOpen}
+                    isLoading={isLoading}
+                    setIsLoading={setIsLoading}
+                  />
+                  <CreateListModal
+                    isModalOpen={isModalOpen}
+                    setIsModalOpen={setIsModalOpen}
+                    handleCreateList={handleCreateList}
+                    listNames={decryptedListNames}
+                  />
+                  <CurrentItems
+                    items={items}
+                    selectedListName={selectedListName}
+                    isLoading={isLoading}
+                    setIsLoading={setIsLoading}
+                    toDeleteItemsIndexed={toDeleteItemsIndexed} 
+                    setToDeleteItemsIndexed={setToDeleteItemsIndexed}
+                  />
+                </div>
+                <DraftContainer 
+                  draftItems={draftItems} 
                   selectedListName={selectedListName}
-                  handleSelectListName={handleSelectListName}
-                  setIsModalOpen={setIsModalOpen}
-                  isLoading={isLoading}
-                  setIsLoading={setIsLoading}
+                  setDraftItems={setDraftItems}
+                  handleSaveToOnchainList={handleSaveToOnchainList}
+                  handleRemoveItemFromDraft={handleRemoveItemFromDraft} 
                 />
-                <CreateListModal
-                  isModalOpen={isModalOpen}
-                  setIsModalOpen={setIsModalOpen}
-                  handleCreateList={handleCreateList}
-                  listNames={decryptedListNames}
-                />
-                <CurrentItems
-                  items={items}
-                  selectedListName={selectedListName}
-                  isLoading={isLoading}
-                  setIsLoading={setIsLoading}
-                  toDeleteItemsIndexed={toDeleteItemsIndexed} 
-                  setToDeleteItemsIndexed={setToDeleteItemsIndexed}
-                />
-              </div>
-              <DraftContainer 
-                draftItems={draftItems} 
-                selectedListName={selectedListName}
-                setDraftItems={setDraftItems}
-                handleSaveToOnchainList={handleSaveToOnchainList}
-                handleRemoveItemFromDraft={handleRemoveItemFromDraft} 
-              />
-            </>
-          )
-        }
+              </>
+            )
+          }
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 };
