@@ -1,7 +1,7 @@
 import CryptoJS from "crypto-js";
 
-const SECRET = process.env.NEXT_PUBLIC_SHARED_SECRET as string;
-const FIXED_SALT = process.env.NEXT_PUBLIC_FIXED_SALT as string;
+const SECRET = process.env.NEXT_PUBLIC_SHARED_SECRET;
+const FIXED_SALT = process.env.NEXT_PUBLIC_FIXED_SALT;
 
 if (!SECRET) throw new Error("SECRET is not set");
 if (!FIXED_SALT) throw new Error("FIXED_SALT is not set");
