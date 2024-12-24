@@ -11,7 +11,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="w-full border-t">
+    <footer className="w-full px-4 py-4 border-t">
       <div className="container mx-auto py-4 flex justify-around">
         <a
           href="https://www.alchemy.com/faucets/base-sepolia"

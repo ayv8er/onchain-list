@@ -17,7 +17,7 @@ export default function DraftContainer({
   handleRemoveItemFromDraft,
 }: DraftContainerProps) {
   return (
-    <div className="w-full flex flex-col items-center justify-around">
+    <div className="w-full flex flex-col items-center justify-around px-2">
       <Input 
         draftItems={draftItems} 
         selectedListName={selectedListName}

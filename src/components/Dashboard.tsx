@@ -77,13 +77,13 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="mx-auto w-full max-w-[430px] min-h-screen border">
+    <div className="mx-auto w-full max-w-[375px] min-h-screen border">
       <div className="flex flex-col h-full">
-        <div className="flex-grow flex flex-col items-center py-20 space-y-8">
+        <div className="flex-grow flex flex-col items-center py-20 space-y-8 px-4">
           {
             isLoading ? <Loader /> : (
               <>
-                <div className="space-y-4 w-full">  
+                <div className="space-y-4 w-full px-2">  
                   <ListContainer 
                     items={items}
                     listNames={decryptedListNames}

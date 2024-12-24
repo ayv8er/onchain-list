@@ -49,7 +49,7 @@ export default function CreateListModal({
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-      <div className="border bg-black p-8 rounded-lg w-96">
+      <div className="border bg-black p-4 rounded-lg w-[320px]">
         <h2 className="text-xl text-white mb-4">Create New List</h2>
         <div>
           <input
@@ -63,13 +63,13 @@ export default function CreateListModal({
           <div className="flex justify-end gap-2">
             <button
               onClick={handleCloseModal}
-              className="px-4 py-2 text-white hover:text-gray-800"
+              className="px-3 py-1.5 text-white hover:text-gray-800"
             >
               Cancel
             </button>
             <button
               onClick={(e) => handleSubmit(e)}
-              className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+              className="px-3 py-1.5 bg-blue-500 text-white rounded hover:bg-blue-600"
             >
               Create
             </button>

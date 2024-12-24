@@ -12,7 +12,7 @@ export default function DraftItems({
   handleSaveToOnchainList
 }: DraftItemsProps) {
   return (
-    <div className="rounded-lg p-4 w-full">
+    <div className="rounded-lg p-4 w-full space-y-4">
       <h2 className="font-semibold mb-3">Draft List ({draftItems.length}/10)</h2>
       {draftItems.length === 0 ? (
         <p className="text-gray-500 text-sm">No items to save</p>

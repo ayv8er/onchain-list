@@ -21,7 +21,7 @@ export default function ListContainer({
   setIsLoading, 
 }: ListContainerProps) {
   return (
-    <div className="w-full flex flex-col items-center justify-center">
+    <div className="w-full flex flex-col items-center justify-center px-2">
       <ListSelector 
         listNames={listNames || []}
         selectedListName={selectedListName}

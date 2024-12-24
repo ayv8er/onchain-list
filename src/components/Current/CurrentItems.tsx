@@ -44,7 +44,7 @@ export default function CurrentItems({
   if (isError) return <div>Error fetching list</div>
 
   return (
-    <div className="rounded-lg p-4 w-full">
+    <div className="rounded-lg p-4 px-2 w-full">
       <div className="flex justify-between items-center">
         <h2 className="font-semibold mb-3">
           {selectedListName} list ({items?.length || 0}/50)
