@@ -10,6 +10,10 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
+    "@lit-protocol/auth-helpers": "^7.0.3",
+    "@lit-protocol/constants": "^7.0.3",
+    "@lit-protocol/contracts-sdk": "^7.0.3",
+    "@lit-protocol/lit-node-client": "^7.0.3",
     "@tanstack/react-query": "^5.62.8",
     "crypto-js": "^4.2.0",
     "next": "15.1.1",
